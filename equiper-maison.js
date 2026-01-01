@@ -20,7 +20,8 @@ const data = {
         { nom: "Home Sweet Home", note: 4.2, tag: "Éco-responsable", adresse: "14 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" },
         { nom: "Meubles & Co", note: 4.4, tag: "Livraison", adresse: "21 avenue Montaigne, Paris", image: "https://via.placeholder.com/150" },
         { nom: "Mobilier Chic", note: 4.5, tag: "Design", adresse: "3 rue de la Paix, Paris", image: "https://via.placeholder.com/150" },
-        { nom: "Urban Meubles", note: 4.1, tag: "Proximité", adresse: "9 boulevard Haussmann, Paris", image: "https://via.placeholder.com/150" }],
+        { nom: "Urban Meubles", note: 4.1, tag: "Proximité", adresse: "9 boulevard Haussmann, Paris", image: "https://via.placeholder.com/150" }
+    ],
     depot: [
     { nom: "Troc Maison", note: 4.1, tag: "Occasion", adresse: "20 rue de la Paix, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Seconde Vie", note: 4.3, tag: "Bon prix", adresse: "15 rue de Rivoli, Paris", image: "https://via.placeholder.com/150" },
@@ -29,7 +30,8 @@ const data = {
     { nom: "Dépot Chic", note: 4.4, tag: "Livraison possible", adresse: "4 rue de la République, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Vintage Home", note: 4.3, tag: "Style rétro", adresse: "9 rue Lafayette, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Maison Récup", note: 4.0, tag: "Éco", adresse: "11 boulevard Saint-Germain, Paris", image: "https://via.placeholder.com/150" },
-    { nom: "Second Chance", note: 4.1, tag: "Occasion", adresse: "18 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" }],
+    { nom: "Second Chance", note: 4.1, tag: "Occasion", adresse: "18 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" }
+    ],
     deco: [
     { nom: "Zara Home", note: 4.4, tag: "Décoration", adresse: "14 rue de Sévigné, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Maisons du Monde Déco", note: 4.5, tag: "Design", adresse: "12 rue des Lilas, Paris", image: "https://via.placeholder.com/150" },
@@ -38,7 +40,8 @@ const data = {
     { nom: "Urban Déco", note: 4.3, tag: "Livraison rapide", adresse: "21 avenue Montaigne, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Maison & Style", note: 4.0, tag: "Qualité", adresse: "7 rue Saint-Honoré, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Déco Express", note: 4.4, tag: "Service rapide", adresse: "18 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" },
-    { nom: "Chic Déco", note: 4.5, tag: "Design", adresse: "3 rue de la Paix, Paris", image: "https://via.placeholder.com/150" }],
+    { nom: "Chic Déco", note: 4.5, tag: "Design", adresse: "3 rue de la Paix, Paris", image: "https://via.placeholder.com/150" }
+    ],
     chauffage: [
     { nom: "Chauffage Pro", note: 4.2, tag: "Installation", adresse: "3 avenue Victor Hugo, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Chauffage Express", note: 4.3, tag: "Rapide", adresse: "5 rue Lafayette, Paris", image: "https://via.placeholder.com/150" },
@@ -47,7 +50,8 @@ const data = {
     { nom: "Expert Chauffage", note: 4.0, tag: "Service", adresse: "18 avenue Montaigne, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Chauffage & Co", note: 4.2, tag: "Bon prix", adresse: "9 rue Saint-Honoré, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Eco Chauffage", note: 4.5, tag: "Énergie verte", adresse: "14 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" },
-    { nom: "Top Chauffage", note: 4.1, tag: "Rapide", adresse: "21 rue de la Paix, Paris", image: "https://via.placeholder.com/150" }],
+    { nom: "Top Chauffage", note: 4.1, tag: "Rapide", adresse: "21 rue de la Paix, Paris", image: "https://via.placeholder.com/150" }
+    ],
     clim: [
     { nom: "Clim Expert", note: 4.5, tag: "Maintenance", adresse: "6 boulevard Saint-Germain, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Climatisation Pro", note: 4.3, tag: "Installation", adresse: "12 rue Lafayette, Paris", image: "https://via.placeholder.com/150" },
@@ -56,7 +60,8 @@ const data = {
     { nom: "Maison Clim", note: 4.1, tag: "Proximité", adresse: "7 boulevard Haussmann, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Expert Clim", note: 4.0, tag: "Qualité", adresse: "14 avenue Montaigne, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Top Clim", note: 4.5, tag: "Rapide", adresse: "21 rue de la Paix, Paris", image: "https://via.placeholder.com/150" },
-    { nom: "Climatisation Plus", note: 4.3, tag: "Livraison", adresse: "9 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" }],
+    { nom: "Climatisation Plus", note: 4.3, tag: "Livraison", adresse: "9 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" }
+    ],
     eau: [
     { nom: "Hydro Services", note: 4.0, tag: "Chauffe-eau", adresse: "9 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Eau & Co", note: 4.2, tag: "Installation", adresse: "12 rue Lafayette, Paris", image: "https://via.placeholder.com/150" },
@@ -65,7 +70,8 @@ const data = {
     { nom: "Top Eau", note: 4.0, tag: "Rapide", adresse: "7 boulevard Haussmann, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Eau Express", note: 4.3, tag: "Qualité", adresse: "14 avenue Montaigne, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Hydro Plus", note: 4.1, tag: "Livraison", adresse: "21 rue de la Paix, Paris", image: "https://via.placeholder.com/150" },
-    { nom: "Eau Maison", note: 4.5, tag: "Bon prix", adresse: "9 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" }],
+    { nom: "Eau Maison", note: 4.5, tag: "Bon prix", adresse: "9 rue du Faubourg, Paris", image: "https://via.placeholder.com/150" }
+    ],
     pac: [
     { nom: "Eco PAC", note: 4.6, tag: "Énergie verte", adresse: "12 avenue de l’Europe, Paris", image: "https://via.placeholder.com/150" },
     { nom: "PAC Expert", note: 4.4, tag: "Installation", adresse: "5 rue de Rivoli, Paris", image: "https://via.placeholder.com/150" },
@@ -74,7 +80,8 @@ const data = {
     { nom: "Top PAC", note: 4.3, tag: "Proximité", adresse: "18 rue Saint-Honoré, Paris", image: "https://via.placeholder.com/150" },
     { nom: "PAC & Co", note: 4.1, tag: "Qualité", adresse: "7 boulevard Haussmann, Paris", image: "https://via.placeholder.com/150" },
     { nom: "Expert PAC", note: 4.2, tag: "Livraison", adresse: "12 rue Lafayette, Paris", image: "https://via.placeholder.com/150" },
-    { nom: "PAC Maison", note: 4.4, tag: "Bon prix", adresse: "14 avenue Montaigne, Paris", image: "https://via.placeholder.com/150" }]
+    { nom: "PAC Maison", note: 4.4, tag: "Bon prix", adresse: "14 avenue Montaigne, Paris", image: "https://via.placeholder.com/150" }
+    ]
 };
 
 const villesMaroc = [
