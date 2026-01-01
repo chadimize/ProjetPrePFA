@@ -1,4 +1,4 @@
-/* RESET */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,7 +7,6 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* HEADER */
 header {
   background-color:#e7e4a0;
   padding: 15px 0;
@@ -17,7 +16,6 @@ header {
   z-index: 1000;
 }
 
-/* NAV */
 nav {
   display: flex;
   justify-content: center;
@@ -37,24 +35,24 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* SECTIONS */
+
 section {
   min-height: 100vh;
   
 }
 
-/* Couleurs */
+
 #accueil { background-color: #f2f2f2; }
 #apropos { background-color: #dfe6e9; }
 #services { background-color: #b2bec3; }
 #contact { background-color: #95a5a6; }
 
-/* TITRES */
+
 h1 {
   margin-top: 0;
 }
 
-/* DIV .first */
+
 .first {
   background-color: rgb(24, 46, 84);
   height: 300px;
@@ -79,7 +77,7 @@ h1 {
   padding-top: 170px ;
 }
 
-/* Mot "travaux" avec fond blanc */
+
 .travaux {
   display: inline-block;
   background-color: rgb(251, 251, 251);
@@ -91,27 +89,27 @@ h1 {
   margin: 0 5px;
 }
 
-/* Mot "maison" avec underline stylé */
+
 .maison {
   display: inline-block;
   color: #e17055;
   transform: rotate(3deg);
   margin: 0 5px;
-  position: relative; /* nécessaire pour le pseudo-élément */
+  position: relative; 
 }
 
-/* pseudo-élément pour l'underline stylé */
+
 .maison::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px; /* ajuster selon la taille du texte */
+  bottom: -5px; 
   width: 100%;
   height: 8px;
   background: #ffffff;
-  border-radius: 50% / 25%; /* arrondi pour effet “brush” */
-  transform: rotate(-3deg); /* inclinaison subtile */
-  z-index: -1; /* derrière le texte */
+  border-radius: 50% / 25%; 
+  transform: rotate(-3deg); 
+  z-index: -1;
 }
 
 
@@ -123,7 +121,7 @@ h1 {
   margin-top: 15px;
 }
 
-/* Bouton stylé */
+
 .second button {
   padding: 10px 20px;
   font-size: 16px;
@@ -179,7 +177,7 @@ h1 {
   transform: scale(1.1);
 }
 
-/* Zone de boutons */
+
 .services {
   display: flex;
   overflow-x: auto;       /* scroll horizontal si trop de boutons */
