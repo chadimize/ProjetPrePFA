@@ -3,15 +3,19 @@ const express = require("express");
 const router = express.Router();
 const Shop = require("../Models/Shop");
 
-// 🔹 POST – Ajouter plusieurs magasins d'un coup
+// 🔹 POST – Ajouter plusieurs magasins depuis "depot"
 router.post("/", async (req, res) => {
   try {
-    const shops = req.body; // On reçoit un tableau JSON comme celui qu'on a préparé
-    if (!Array.isArray(shops)) {
-      return res.status(400).json({ message: "Données invalides : doit être un tableau" });
+    const { depot } = req.body; // déstructure la clé "depot"
+
+    // Vérification si depot est bien un tableau
+    if (!Array.isArray(depot)) {
+      return res.status(400).json({ message: "Données invalides : 'depot' doit être un tableau" });
     }
 
-    const insertedShops = await Shop.insertMany(shops);
+    // Insertion dans la base
+    const insertedShops = await Shop.insertMany(depot);
+
     res.status(201).json({
       message: `${insertedShops.length} magasins ajoutés avec succès !`,
       data: insertedShops
@@ -21,6 +25,9 @@ router.post("/", async (req, res) => {
     res.status(500).json({ message: "Erreur serveur lors de l'ajout des magasins", error: err.message });
   }
 });
+
+module.exports = router;
+
 
 // 🔹 GET – Récupérer tous les magasins
 router.get("/", async (req, res) => {
@@ -32,5 +39,20 @@ router.get("/", async (req, res) => {
     res.status(500).json({ message: "Erreur serveur", error: err.message });
   }
 });
+
+// DELETE – supprimer tous les magasins
+router.delete("/", async (req, res) => {
+  try {
+    const result = await Shop.deleteMany({});
+    res.json({
+      message: `${result.deletedCount} magasins supprimés`
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+
 
 module.exports = router;
