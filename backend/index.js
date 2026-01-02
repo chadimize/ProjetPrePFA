@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 // Connexion à MongoDB
-const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://driss:driss123@driss.otqicoq.mongodb.net/doorstep?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://benoutmanchadi:chadii123@projetpfa.tqtyicq.mongodb.net/?appName=ProjetPFA';
 mongoose.connect(mongoURI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
