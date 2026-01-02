@@ -181,10 +181,18 @@ cityBtn.addEventListener("click", () => {
 
 cityItems.forEach(city => {
   city.addEventListener("click", () => {
-    currentCity.textContent = city.dataset.city;
+    const cityName = city.dataset.city;
+
+    currentCity.textContent = cityName;
+    searchCityInput.value = cityName;
+
+    selectedCity = cityName.toLowerCase();
+
     citySelector.classList.remove("active");
+    liveSearch(); // 🔥 mise à jour directe
   });
 });
+
 
 // fermer si clic ailleurs
 document.addEventListener("click", e => {
@@ -209,6 +217,7 @@ closeMap.addEventListener("click", () => {
 });
 
 function initMap() {
+    
   window.mapInitialized = true;
 
   const map = L.map("map").setView([33.5731, -7.5898], 6); // Maroc
@@ -225,6 +234,7 @@ function initMap() {
     Agadir: [30.4278, -9.5981]
   };
 
+
   Object.entries(cities).forEach(([name, coords]) => {
     L.marker(coords)
       .addTo(map)
@@ -235,3 +245,71 @@ function initMap() {
       });
   });
 }
+/***********************
+ * 7️⃣ RECHERCHE LIVE (FIX)
+ ***********************/
+let selectedCity = "casablanca";
+
+const searchNameInput = document.getElementById("search-name");
+const searchCityInput = document.getElementById("search-city");
+
+function liveSearch() {
+  const nameValue = searchNameInput.value.trim().toLowerCase();
+
+  Object.keys(data).forEach(section => {
+    const cardsContainer = document.getElementById(section);
+    const block = cardsContainer.closest(".block");
+
+    cardsContainer.innerHTML = "";
+
+    const results = data[section].filter(item => {
+      return (
+        nameValue === "" ||
+        item.nom.toLowerCase().includes(nameValue) ||
+        item.tag.toLowerCase().includes(nameValue)
+      );
+    });
+
+    if (results.length === 0) {
+      block.style.display = "none";
+      return;
+    }
+
+    block.style.display = "block";
+
+    results.forEach(item => {
+      cardsContainer.insertAdjacentHTML(
+        "beforeend",
+        `
+        <div class="card">
+          <div class="card-img">
+            <img src="${item.image}" alt="${item.nom}">
+          </div>
+          <div class="card-body">
+            <h4>${item.nom}</h4>
+            <div class="rating">
+              ${"★".repeat(Math.round(item.note))} (${item.note})
+            </div>
+            <p class="adresse">${item.adresse}</p>
+            <span class="tag">${item.tag}</span>
+            <button>Voir la fiche</button>
+          </div>
+        </div>
+        `
+      );
+    });
+  });
+}
+
+
+searchNameInput.addEventListener("input", liveSearch);
+searchCityInput.addEventListener("input", liveSearch);
+
+
+
+
+searchCityInput.addEventListener("input", () => {
+  selectedCity = searchCityInput.value.toLowerCase();
+  liveSearch();
+});
+
